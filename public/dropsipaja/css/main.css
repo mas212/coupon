@@ -1,0 +1,334 @@
+/**
+*company : dropshipaja; 
+*development : hariyanto
+*/
+
+/**
+*setup
+*/
+.no-padding{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+/** top header **/
+.fullTopHeader.col-sm-12 {
+    background: #efefef;
+    padding: 7px 0px 7px;
+    font-size: 13px;
+}
+/**slider **/
+.fullSlider img{
+	width: 100%;
+}
+/* rule map */
+.ruleMapIcon img{
+	width: 100%;
+	margin-top: 20px;
+}
+.ruleMapText h2 {
+    font-size: 14px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.ruleMapText {
+    font-size: 13px;
+}
+.fullRuleMap{
+    background: #f2f2f2;
+    padding: 23px 0px 23px;
+
+}
+/**
+*logo
+*/
+.fullHeader{
+    padding: 14px 0px 14px;
+}
+
+.logo img {
+    width: 70%;
+}
+.loginText {
+    font-size: 13px;
+    margin-top: 15px;
+    position: absolute;
+    right: 29%;
+    color: #242424;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/**
+*product
+*/
+.fullProduct{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.promoTitle,
+.join h1,
+.incomeAfterJoin h1,
+.review h1,
+.historyUser h2,
+.product h1 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 30px;
+}
+.promoItemContent img,
+.productItemContent img{
+	width: 100%;
+	background: #f2f2f2;
+}
+.promoItemContent,
+.testimoniItemContent,
+.productItemContent {
+    background: #fff;
+    border: 1px solid #f2f2f2;
+    padding: 0px 0px 10px 0px;
+    border-radius: 11px;
+    box-shadow: 0px 1px 11px 1px #efefef;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+.promoProductTitle,
+.productContentTitle {
+    padding: 11px 10px 1px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #363636;
+}
+.promoProductContent,
+.productContentText {
+    padding: 0px 10px 12px;
+    font-size: 13px;
+    color: #4d4c4c;
+}
+.price {
+    font-weight: bold;
+}
+
+/**
+*video box
+*/
+.boxVideo{
+    width: 100%;
+}
+.historyUser{
+    padding-left: 33px;
+    padding-right: 31px;
+    margin-top: 17px;
+    margin-bottom: 20px;
+}
+/**
+*testimoni
+*/
+.fullReview{
+    margin-bottom: 38px;
+}
+.videoTitle{
+     padding: 11px 10px 1px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #363636;
+    text-align: center;
+}
+.videoDescription{
+    padding: 0px 10px 12px;
+    font-size: 13px;
+    color: #4d4c4c;  
+    text-align: center; 
+}
+/**
+*after join
+*/
+.fullIncomeAfterJoin{
+    background: #fbfbfb;
+}
+
+.incomeAfterJoin.col-sm-12 {
+    padding-left: 26px;
+    padding-right: 26px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+.joinItems ul{
+    margin-top: 10px;
+}
+.joinItems ul li{
+    text-align: center;
+    color: #fff;
+}
+.joinItems {
+    padding: 6px 10px 1px;
+}
+.joinItems ul {
+    margin-top: 10px;
+    padding: 9px 0px 7px;
+    list-style: none;
+    font-size: 19px;
+}
+.joinList {
+    padding-bottom: 51px;
+    padding-top: 51px;
+}
+
+/**
+*join
+*/
+.join{
+    text-align: center;
+    padding: 10px 0px 10px;
+}
+.priceNormalTitle{
+    font-size: 18px;
+}
+
+.priceNormalTitle {
+    font-size: 21px;
+    color: #323030;
+    padding: 8px 1px 10px;
+}
+
+.priceNormal {
+    font-size: 18px;
+    padding: 4px 0px 10px;
+}
+.priceDis {
+    font-size: 57px;
+    font-weight: bold;
+    color: #1185ba;
+}
+
+.priceDiscountText {
+    font-size: 20px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.priceNormalTitle {
+    font-size: 16px;
+    color: #2a2a2a;
+    padding: 8px 1px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.priceDiscount{
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+/**
+*cta
+*/
+.cta_join {
+    background: #9c0505;
+    padding: 14px 0px 13px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/**
+*footer
+*/
+.footerItemWrapper h3{
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.fullFooter{
+    background: #287fd4;
+    padding: 10px 0px 10px;
+    margin-top: 12px;
+}
+.footerSosmed ul,
+.footerItemWrapper ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.footerItemWrapper ul li{
+    font-size: 14px;
+    padding: 3px 0px 3px;
+    color: #fff;
+}
+.footerItemWrapper ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+.footerSosmed ul li {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 20px;
+    border: 1px solid #fff;
+    padding: 8px 13px 8px 13px;
+    border-radius: 8px;
+}
+/**
+*icon
+*/
+.footerBank ul li {
+    display: inline-block;
+    margin-right: 0px;
+}
+.footerSosmed {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.copyRight {
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    padding: 5px 0px 5px;
+}
+/**
+*promo
+*/
+.promo{
+    margin-top: 15px;
+    margin-bottom: 18px;
+}
+
+.promoTitle{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.pricePublish{
+    color: #696767;
+    text-decoration: line-through
+}
+
+.pricePromoProduct {
+    color: #ea1010;
+    font-weight: bold;
+}
+/**
+*diskon
+*/
+.pricePromo {
+    width: 40px;
+    height: 40px;
+    background: #c80a54;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 100%;
+    padding: 9px 6px;
+    position: absolute;
+    top: 10px;
+    left: 23px;
+}
