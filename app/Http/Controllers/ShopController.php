@@ -11,17 +11,16 @@ class ShopController extends Controller
     public function index()
     {
     	$products = Product::paginate($this->limit);
-    	return view('products', $products);
+    	return view('frontend.product.product')->with([
+            'products' => $products
+        ]);
     }
 
     public function show($slug)
     {
     	$product  		= Product::where('slug', $slug)->firstOrFail();
-
-    	$other_product 	=  Product::where('slug', '!=', $slug)->otherProduct()->get();
     	return view('frontend.product.detail')->with([
-    		'product' 			=> $product,
-    		'other_product' 	=> $other_product
+    		'product' 			=> $product
     	]);
     }
 }

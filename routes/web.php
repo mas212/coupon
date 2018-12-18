@@ -12,3 +12,13 @@
 */
 
 Route::get('/', 'LandingPageController@index')->name('home');
+//product
+Route::get('/product',[
+	'uses' => 'ShopController@index',
+	'as'   => 'product'
+]);
+
+Route::get('/product/{slug}', [
+	'uses' 	=> 'ShopController@show',
+	'as' 	=> 'product-detail'
+]);
