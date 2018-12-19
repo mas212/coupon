@@ -6,7 +6,11 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 detailProduct col-sm-12">
-			     cart
+			     @foreach (Cart::content() as $item)
+			     	<div class="cartName">
+			     		cart
+			     	</div>
+			     @endforeach
 			</div>
 		</div>
 	</div>

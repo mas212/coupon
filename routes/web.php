@@ -26,10 +26,10 @@ Route::get('/product/{slug}', [
 //cart 
 Route::get('/cart', [
 	'uses' => 'CartController@index',
-	'as' => 'cart'
+	'as' => 'cart.index'
 ]);
 
-Route::post('/cart/{product}',[
+Route::post('/cart',[
 	'uses'  => 'CartController@store',
 	'as' 	=> 'cart.store'
 ]);

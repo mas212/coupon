@@ -11,7 +11,7 @@ class Product extends Model
     	return money_format('%i', $this->price / 100);
     }
 
-    public function scopeOtherProduct($query)
+    public function scopeMightAlsoLike($query)
     {
     	return $query->inRandomOrder()->take(4);
     }

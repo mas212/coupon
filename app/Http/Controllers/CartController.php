@@ -10,18 +10,18 @@ class CartController extends Controller
 {
     public function index()
     {
-    	$products = Product::get();
+    	$products = Product::mightAlsoLike()->get();
     	return view('frontend.cart.index')->with([
     		'products' => $products
     	]);
     }
 
-    public function store(Product $product)
+    public function store(Request $request)
     {
-        Cart::add($product->id, $product->name, 1, $product->price)
+        Cart::add($request->id, $request->name, 1, $request->price)
         	->associate('App\Product');
 
-        return redirect()->route('cart');
+        return redirect()->route('cart.index');
     }
 
     public function destroy($id)
