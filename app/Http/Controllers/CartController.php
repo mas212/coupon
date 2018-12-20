@@ -4,29 +4,32 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use Illuminate\Http\Request;
-use Gloudemans\Shoppingcart\Facades\Cart;
+use Cart;
 
 class CartController extends Controller
 {
     public function index()
     {
-    	$products = Product::mightAlsoLike()->get();
-    	return view('frontend.cart.index')->with([
-    		'products' => $products
-    	]);
+    	$cart = Cart::content();
+        return view('frontend.cart.index', [
+            'data' => $cart
+        ]);
     }
 
-    public function store(Request $request)
+    public function addItem($id)
     {
-        Cart::add($request->id, $request->name, 1, $request->price)
-        	->associate('App\Product');
+        $product = Product::findOrFail($id);
+        $add     = Cart::add([
+            'id'        => $product->id,
+            'name'      => $product->name,
+            'qty'       => 1,
+            'price'     => $product->price
+        ]);
 
-        return redirect()->route('cart.index');
-    }
-
-    public function destroy($id)
-    {
-    	Cart::remove($id);
-    	return redirect()->back();
+        if($add){
+           return view('frontend.cart.index',[
+             'data' => Cart::content()
+           ]);
+         }
     }
 }

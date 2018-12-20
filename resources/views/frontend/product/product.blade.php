@@ -8,6 +8,9 @@
 			<div class="col-md-12 promo col-sm-12">
 				<div class="promoTitle">
 					Promo minggu ini
+					<a href="{{ route('cart') }}">
+						keranjang belanja : {{ Cart::count() }}
+					</a>
 				</div>
 				@foreach($products as $product)
 				<div class="col-md-3 promoItems">

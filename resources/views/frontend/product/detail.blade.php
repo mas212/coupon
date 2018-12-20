@@ -20,10 +20,9 @@
 			     		{{ $product->description }}
 			     	</div>
 			     	<div class="detailProductBtn">
-		                <form action="{{ route('cart.store') }}" method="POST">
-		                	{{ csrf_field() }}
-		                	<button type="submit" class="button button-plain">Add to Cart</button>
-		                </form>
+		                <a href="{{url('/cart/add')}}/{{$product->id}}">
+		                	Add tocart
+		                </a>
 			     	</div>
 			     </div>
 			</div>

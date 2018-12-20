@@ -6,10 +6,13 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 detailProduct col-sm-12">
-			     @foreach (Cart::content() as $item)
-			     	<div class="cartName">
-			     		cart
+			     @foreach($data as $item)
+			     	<div class="cartName">{{ $item->name }}</div>
+			     	<div class="cartPrice">{{ $item->price }}</div>
+			     	<div class="cartPrice">
+			     		<input type="text" value="{{ $item->qty }}">
 			     	</div>
+			     	<div class="cartSubtotal">{{ Cart::subtotal() }}</div>
 			     @endforeach
 			</div>
 		</div>

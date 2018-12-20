@@ -24,17 +24,8 @@ Route::get('/product/{slug}', [
 ]);
 
 //cart 
-Route::get('/cart', [
+Route::get('cart',[
 	'uses' => 'CartController@index',
-	'as' => 'cart.index'
+	'as'   => 'cart'
 ]);
-
-Route::post('/cart',[
-	'uses'  => 'CartController@store',
-	'as' 	=> 'cart.store'
-]);
-
-Route::delete('/cart/{product}', [
-	'uses' => 'CartController@destroy',
-	'as' => 'cart.destroy'
-]);
+Route::get('cart/add/{id}', 'CartController@addItem');
