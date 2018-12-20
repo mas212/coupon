@@ -7,12 +7,20 @@
 		<div class="row">
 			<div class="col-md-12 detailProduct col-sm-12">
 			     @foreach($data as $item)
-			     	<div class="cartName">{{ $item->name }}</div>
-			     	<div class="cartPrice">{{ $item->price }}</div>
-			     	<div class="cartPrice">
+			     <div class="col-md-12 cartBox">
+			     	<div class="col-md-2 cartImage">
+			     		<img src="{{ URL::asset('dropsipaja/images/produk-1.png') }}" alt="">
+			     	</div>
+			     	<div class="col-md-4 cartName">
+			     		<div class="cartName">{{ $item->name }}</div>
+			     	</div>
+			     	<div class="col-md-3 cartQty">
 			     		<input type="text" value="{{ $item->qty }}">
 			     	</div>
-			     	<div class="cartSubtotal">{{ Cart::subtotal() }}</div>
+			     	<div class="col-md-3 cartSubtotal">
+			     		<div class="cartPrice">{{ $item->price }}</div>
+			     	</div>
+			     </div>
 			     @endforeach
 			</div>
 		</div>
