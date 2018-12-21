@@ -29,3 +29,7 @@ Route::get('cart',[
 	'as'   => 'cart'
 ]);
 Route::get('cart/add/{id}', 'CartController@addItem');
+Route::delete('/cart/{id}', [
+	'uses'  => 'CartController@destroy',
+	'as' 	=> 'cart.destroy'
+]);
