@@ -381,3 +381,28 @@
     padding: 5px 9px 5px;
     border-radius: 50%;
 }
+
+.totalTitle {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.boxSubtotal {
+    font-size: 14px;
+    font-family: inherit;
+    padding: 5px 0px;
+}
+.boxTotal {
+    background: #06407a;
+    padding: 5px 5px 5px;
+    color: #fff;
+    font-weight: bold;
+}
+.boxTotal {
+    background: #7a0633;
+    padding: 5px 5px 5px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0px;
+}

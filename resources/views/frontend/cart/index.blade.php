@@ -33,6 +33,23 @@
 			     	</div>
 			     </div>
 			     @endforeach
+			     <!-- start total -->
+			     <div class="col-md-12 totalBox">
+			     	<div class="col-md-offset-8 totalWrapper col-md-4">
+			     		<div class="totalTitle">
+			     			Total Amount
+			     		</div>
+			     		<div class="boxSubtotal">
+			     			<span class="subtotalTitle">Subtotal</span>
+			     			Rp.{{ Cart::subtotal() }}
+			     		</div>
+			     		<div class="boxTotal">
+			     			<span class="total">Subtotal</span>
+			     			Rp.{{ Cart::total() }}
+			     		</div>
+			     	</div>
+			     </div>
+			     <!-- end total -->
 			</div>
 		</div>
 	</div>
