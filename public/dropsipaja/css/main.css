@@ -406,3 +406,7 @@
     text-align: center;
     margin: 10px 0px;
 }
+.boxChevron {
+    position: absolute;
+    right: 26px;
+}

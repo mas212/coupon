@@ -44,8 +44,12 @@
 			     			Rp.{{ Cart::subtotal() }}
 			     		</div>
 			     		<div class="boxTotal">
-			     			<span class="total">Subtotal</span>
-			     			Rp.{{ Cart::total() }}
+			     			<span class="total">Checkout</span>
+			     			Rp {{ Cart::total() }} 
+			     			<span class="boxChevron">
+			     				<i class="fa fa-chevron-right" aria-hidden="true"></i>
+			     			</span>
+
 			     		</div>
 			     	</div>
 			     </div>
