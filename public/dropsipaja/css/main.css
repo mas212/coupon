@@ -375,3 +375,9 @@
     width: 70px;
     height: 70px;
 }
+.cartAction a {
+    background: #c80202;
+    color: #fff;
+    padding: 5px 9px 5px;
+    border-radius: 50%;
+}

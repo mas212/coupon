@@ -17,8 +17,15 @@
 			     	<div class="col-md-3 cartQty">
 			     		<input type="text" value="{{ $item->qty }}">
 			     	</div>
-			     	<div class="col-md-3 cartSubtotal">
+			     	<div class="col-md-2 cartSubtotal">
 			     		<div class="cartPrice">{{ $item->price }}</div>
+			     	</div>
+			     	<div class="col-md-1 cartSubtotal">
+			     		<div class="cartAction">
+			     			<a href="#">
+			     				<i class="fa fa-close"></i>
+			     			</a>
+			     		</div>
 			     	</div>
 			     </div>
 			     @endforeach
