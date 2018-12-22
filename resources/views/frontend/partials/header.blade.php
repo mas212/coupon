@@ -5,7 +5,6 @@
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('dropsipaja/bootstrap/css/bootstrap.css')  }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('dropsipaja/css/main.css')  }}">
 	<link rel="stylesheet" type="text/css" href="{{ URL::asset('dropsipaja/font-awesome/css/font-awesome.css')  }}">
-	<script type="text/javascript" src="{{Config::get('app.url')}}/public/js/jquery-1.11.3.js"></script>
 </head>
 <body>
 <!-- start top header-->
