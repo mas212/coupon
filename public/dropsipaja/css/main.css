@@ -410,3 +410,10 @@
     position: absolute;
     right: 26px;
 }
+.cart-options {
+    background: #b70f0f;
+    border: 0px;
+    padding: 6px 6px 6px 6px;
+    border-radius: 50%;
+    color: #fff;
+}

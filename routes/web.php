@@ -33,3 +33,4 @@ Route::delete('/cart/{id}', [
 	'uses'  => 'CartController@destroy',
 	'as' 	=> 'cart.destroy'
 ]);
+Route::get('cart/update/','CartController@update');

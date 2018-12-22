@@ -33,6 +33,15 @@ class CartController extends Controller
          }
     }
 
+    public function update(Request $request)
+    {
+        $qty = $request->newQty;
+        $rowId = $request->rowID;
+        Cart::update($rowId,$qty);
+        echo "Cart updated successfully";
+        echo "Cart updated successfully";
+    }
+
     public function destroy($id)
     { 
         Cart::remove($id);

@@ -1,11 +1,35 @@
 @extends('frontend.layout')
 
 @section('content')
+ <script>
+   $(document).ready(function() {
+    @foreach($data as $item)
+    $("#upCart{{$item->id}}").on('change keyup', function(){
+      var newQty = $("#upCart{{$item->id}}").val();
+      var rowID = $("#rowID{{$item->id}}").val();
+      $.ajax({
+          url:'{{url('/cart/update')}}',
+          data:'rowID=' + rowID + '&newQty=' + newQty,
+          type:'get',
+          success:function(response){
+            $("#CartMsg").show();
+            console.log(response);
+            $("#CartMsg").html(response);
+          }
+      });
+    });
+    @endforeach 
+  });
+  </script>
 <!-- promo -->
 <div class="col-md-12 fullPromo col-sm-12">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 detailProduct col-sm-12">
+			@if(isset($msg))
+          		<div class="alert alert-info">{{$msg}}</div>
+          	@endif
+			<div class="alert alert-info" id="CartMsg"></div>
 			     @foreach($data as $item)
 			     <div class="col-md-12 cartBox">
 			     	<div class="col-md-2 cartImage">
@@ -15,7 +39,12 @@
 			     		<div class="cartName">{{ $item->name }}</div>
 			     	</div>
 			     	<div class="col-md-3 cartQty">
-			     		<input type="text" value="{{ $item->qty }}">
+			     		<input type="hidden" value="{{$item->rowId}}"
+                                       id="rowID{{$item->id}}"/>
+			     		<input type="number" max="10" min="1"
+                                        value="{{$item->qty}}" class="qty-fill"
+                                        id="upCart{{$item->id}}">
+			     		<a class="cart-remove btn btn-success" >Update</a>
 			     	</div>
 			     	<div class="col-md-2 cartSubtotal">
 			     		<div class="cartPrice">{{ $item->price }}</div>
