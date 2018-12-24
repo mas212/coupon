@@ -15,4 +15,9 @@ class Product extends Model
     {
     	return $query->inRandomOrder()->take(4);
     }
+
+    public function orderDetail()
+    {
+        return $this->hasMany('App\OrderProduct','product_id');
+    }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Order;
 use App\Product;
 use Illuminate\Http\Request;
 use Cart;
@@ -39,7 +40,6 @@ class CartController extends Controller
         $rowId = $request->rowID;
         Cart::update($rowId,$qty);
         echo "Cart updated successfully";
-        echo "Cart updated successfully";
     }
 
     public function destroy($id)
@@ -47,5 +47,10 @@ class CartController extends Controller
         Cart::remove($id);
         return back()->with('success_message', 'Item has been removed!');
 
+    }
+
+    public function checkout()
+    {
+        return Order::createOrder();
     }
 }

@@ -1,6 +1,27 @@
 @extends('frontend.layout')
 
 @section('content')
+<script>
+   var $ = jQuery;
+   jQuery(document).ready(function($){
+    @foreach($data as $item)
+    $("#upCart{{$item->id}}").on('change keyup', function(){
+      var newQty = $("#upCart{{$item->id}}").val();
+      var rowID = $("#rowID{{$item->id}}").val();
+      $.ajax({
+          url:'{{url('/cart/update')}}',
+          data:'rowID=' + rowID + '&newQty=' + newQty,
+          type:'get',
+          success:function(response){
+            $("#CartMsg").show();
+            //console.log(response);
+            $("#CartMsg").html(response);
+          }
+      });
+    });
+    @endforeach 
+  });
+  </script>
 <!-- promo -->
 <div class="col-md-12 fullPromo col-sm-12">
 	<div class="container">
@@ -52,14 +73,15 @@
 			     			<span class="subtotalTitle">Subtotal</span>
 			     			Rp.{{ Cart::subtotal() }}
 			     		</div>
+			     		<a href="{{url('checkout')}}">
 			     		<div class="boxTotal">
 			     			<span class="total">Checkout</span>
 			     			Rp {{ Cart::total() }} 
-			     			<span class="boxChevron">
-			     				<i class="fa fa-chevron-right" aria-hidden="true"></i>
-			     			</span>
-
+				     			<span class="boxChevron">
+				     				<i class="fa fa-chevron-right" aria-hidden="true"></i>
+				     			</span>
 			     		</div>
+			     		</a>
 			     	</div>
 			     </div>
 			     <!-- end total -->

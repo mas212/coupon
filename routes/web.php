@@ -12,6 +12,8 @@
 */
 
 Route::get('/', 'LandingPageController@index')->name('home');
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
 //product
 Route::get('/product',[
 	'uses' => 'ShopController@index',
@@ -34,3 +36,14 @@ Route::delete('/cart/{id}', [
 	'as' 	=> 'cart.destroy'
 ]);
 Route::get('cart/update/','CartController@update');
+
+//checkout
+Route::get('checkout', [
+	'uses' 	=> 'CartController@checkout',
+	'as' 	=> 'checkout'
+]);
+
+Route::post('placeOrder', [
+	'uses' 	=> 'CheckoutController@store',
+	'as' 	=> 'placeOrder'
+]);
