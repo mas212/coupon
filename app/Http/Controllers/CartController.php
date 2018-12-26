@@ -51,6 +51,7 @@ class CartController extends Controller
 
     public function checkout()
     {
-        return Order::createOrder();
+        Order::createOrder();
+        return redirect()->route('checkout.index');
     }
 }

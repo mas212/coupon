@@ -47,3 +47,8 @@ Route::post('placeOrder', [
 	'uses' 	=> 'CheckoutController@store',
 	'as' 	=> 'placeOrder'
 ]);
+
+Route::get('checkout/item', [
+	'uses' => 'CheckoutController@index',
+	'as' 	=> 'checkout.index'
+]);

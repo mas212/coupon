@@ -11,9 +11,7 @@ class CheckoutController extends Controller
 {
     public function index()
     {
-    	return view('frontend.checkout.index', [
-    		'data' => Cart::content()
-    	]);
+    	return view('frontend.checkout.index');
     }
 
     public function store(Request $request)
