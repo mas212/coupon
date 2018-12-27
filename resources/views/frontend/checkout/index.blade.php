@@ -6,9 +6,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 checkout col-sm-12">
-				<form action="{{url('/placeOrder')}}" method="post">
+				<form action="{{url('/placeOrder')}}" method="POST">
 					<input type="hidden" value="{{csrf_token()}}" name="_token"/>
-					<h3 class="text-center">Checkout</h3>
+					<h3 class="text-center">Payment</h3>
 					  <div class="form-group">
 					        <div class="col-md-6">
 					            <!-- First name -->
@@ -37,6 +37,11 @@
 					            <textarea  class="form-control" rows="5" placeholder="Full Address"
 					             name="fullAddress"></textarea>
 					             <span style="color:red">{{ $errors->first('fullAddress') }}</span>
+					        </div>
+					        <div class="col-md-12 buttonSave">
+					        	<button class="btn btn-red btn-bigger btn-checkout finish-checkout" type="submit">
+			                      Payment  &raquo;
+			                    </button>
 					        </div>      
 					    </div>
 					</div>

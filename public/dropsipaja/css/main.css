@@ -417,3 +417,13 @@
     border-radius: 50%;
     color: #fff;
 }
+/**
+*shipping
+*/
+.checkout{
+    background: #f8f8f8;
+    padding: 10px 0px 10px;
+    margin: 10px 0px 10px;
+    border-radius: 5px;
+    border: 1px solid #f2f2f2;
+}
