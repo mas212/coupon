@@ -13,7 +13,9 @@
 				<div class="col-md-3 promoItems">
 					<div class="promoItemContent">
 						<div class="promoItemImg">
-							<img src="{{ URL::asset('dropsipaja/images/produk-1.png') }}" alt="">	
+							<a href="{{ route('product-detail', $product->slug) }}">
+								<img src="{{ URL::asset('dropsipaja/images/produk-1.png') }}" alt="">	
+							</a>
 						</div>
 						<div class="promoProductTitle">
 							{{ $product->name }}

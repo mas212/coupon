@@ -67,5 +67,26 @@
 </div>
 <!-- end join -->
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+   var $ = jQuery;
+   jQuery(document).ready(function($){
+    @foreach($data as $item)
+    $("#upCart{{$item->id}}").on('change keyup', function(){
+      var newQty = $("#upCart{{$item->id}}").val();
+      var rowID = $("#rowID{{$item->id}}").val();
+      $.ajax({
+          url:'{{url('/cart/update')}}',
+          data:'rowID=' + rowID + '&newQty=' + newQty,
+          type:'get',
+          success:function(response){
+            $("#CartMsg").show();
+            //console.log(response);
+            $("#CartMsg").html(response);
+          }
+      });
+    });
+    @endforeach 
+  });
+  </script>
 </body>
 </html>

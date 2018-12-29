@@ -1,27 +1,6 @@
 @extends('frontend.layout')
 
 @section('content')
-<script>
-   var $ = jQuery;
-   jQuery(document).ready(function($){
-    @foreach($data as $item)
-    $("#upCart{{$item->id}}").on('change keyup', function(){
-      var newQty = $("#upCart{{$item->id}}").val();
-      var rowID = $("#rowID{{$item->id}}").val();
-      $.ajax({
-          url:'{{url('/cart/update')}}',
-          data:'rowID=' + rowID + '&newQty=' + newQty,
-          type:'get',
-          success:function(response){
-            $("#CartMsg").show();
-            //console.log(response);
-            $("#CartMsg").html(response);
-          }
-      });
-    });
-    @endforeach 
-  });
-  </script>
 <!-- promo -->
 <div class="col-md-12 fullPromo col-sm-12">
 	<div class="container">
