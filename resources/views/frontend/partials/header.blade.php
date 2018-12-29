@@ -36,9 +36,11 @@
 					<img src="{{ URL::asset('dropsipaja/images/logo-dropsipaja.png') }}" alt="">
 				</div>
 				<div class="col-md-offset-4 col-md-5 headerRight">
-					<div class="loginText">
-						<i class="fa fa-user"></i> Member Login
-					</div>
+					<a href="{{ route('login') }}">
+						<div class="loginText">
+							<i class="fa fa-user"></i> Member Login
+						</div>
+					</a>
 				</div>
 			</div>
 		</div>
