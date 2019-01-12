@@ -9,14 +9,21 @@ use Illuminate\Http\Request;
 class LandingPageController extends Controller
 {
 	protected $limit = 10;
-    public function index()
+    public function index(Request $request)
     {
     	$cart = Cart::content();
-    	$products = Product::paginate($this->limit);
-    	//return view('frontend.home.index')->with('products', $products);
-    	return view('frontend.home.index', [
+    
+        if(isset($request->price)){
+            $price = $request->price;
+            $products = Product::explode(',', $request->price)->get();
+            response()->json($products);
+            return redirect()->back();            
+        }else{
+            $products = Product::paginate($this->limit);
+            return view('frontend.home.index', [
             'data' => $cart,
             'products' => $products
         ]);
+        }
     }
 }

@@ -5,7 +5,17 @@
 <div class="col-md-12 fullPromo col-sm-12">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12 promo col-sm-12">
+		    <div class="col-md-3 left">
+		    	<ul>
+		    		@foreach($products as $product)
+		    		<li  class="brandLi">
+		    			<input type="checkbox" id="brandId" value="{{ $product->id }}" class="try">
+		    			{{ ucwords($product->price) }}
+		    		</li>
+		    		@endforeach
+		    	</ul>
+		    </div>
+			<div class="col-md-9 promo col-sm-12" id="updateDiv">
 				<div class="promoTitle">
 					Promo minggu ini
 				</div>

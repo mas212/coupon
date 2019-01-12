@@ -88,6 +88,26 @@
       });
     });
     @endforeach 
+    //filter checkbox
+        $('.try').click(function(){
+        	var price = [];
+        	$('.try').each(function(){
+        		if($(this).is(":checked")){
+        			price.push($(this).val());
+        		}
+        	});
+        	finalPrice = price.toString();
+
+        	$.ajax({
+        		type: 'get',
+        		dataType: 'html',
+        		url: '',
+        		data: "brand" + finalPrice,
+        		success: function(response){
+        			$("#updateDiv").html(response);
+        		}
+        	});
+        });
   });
   </script>
 </body>
