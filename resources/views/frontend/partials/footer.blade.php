@@ -66,49 +66,36 @@
 	</div>
 </div>
 <!-- end join -->
-<script src="https://code.jquery.com/jquery-3.3.1.js"
-			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-			  crossorigin="anonymous"></script>
-<script>
-   var $ = jQuery;
-   jQuery(document).ready(function($){
-    @foreach($data as $item)
-    $("#upCart{{$item->id}}").on('change keyup', function(){
-      var newQty = $("#upCart{{$item->id}}").val();
-      var rowID = $("#rowID{{$item->id}}").val();
-      $.ajax({
-          url:'{{url('/cart/update')}}',
-          data:'rowID=' + rowID + '&newQty=' + newQty,
-          type:'get',
-          success:function(response){
-            $("#CartMsg").show();
-            //console.log(response);
-            $("#CartMsg").html(response);
-          }
-      });
-    });
-    @endforeach 
-    //filter checkbox
-        $('.try').click(function(){
-        	var price = [];
-        	$('.try').each(function(){
-        		if($(this).is(":checked")){
-        			price.push($(this).val());
-        		}
-        	});
-        	finalPrice = price.toString();
+<script type="text/javascript" src="{{ URL::asset('js/jquery-3.1.1.min.js') }}"></script>
 
-        	$.ajax({
-        		type: 'get',
-        		dataType: 'html',
-        		url: '',
-        		data: "brand" + finalPrice,
-        		success: function(response){
-        			$("#updateDiv").html(response);
-        		}
-        	});
+  <script type="text/javascript">
+	$(document).ready(function(){
+		//filter checkbox
+        $('.category').on('click', function (e) {
+        	e.preventDefault();
+        	e.stop
+            var kategori = [];
+            $('.category').each(function(){
+                if($(this).is(":checked")){
+
+                    kategori.push($(this).val());
+                }
+            });
+            Finalkategori  = kategori.toString();
+
+            $.ajax({
+                    type: 'get',
+                    url: '',
+                    async: false,
+                    data: "kategori=" + Finalkategori,
+                    success: function (response) {
+                        console.log(response);
+                        $('#updateDiv').html(response);
+                    }
+                });
+
         });
-  });
-  </script>
+	});
+</script>
 </body>
 </html>

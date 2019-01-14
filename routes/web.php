@@ -52,3 +52,8 @@ Route::get('checkout/item', [
 	'uses' => 'CheckoutController@index',
 	'as' 	=> 'checkout.index'
 ]);
+
+Route::get('product/filter', [
+	'uses' => 'LandingPageController@filter',
+	'as' => 'product.filter'
+]);
